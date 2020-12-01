@@ -11,27 +11,4 @@ fun main() {
     day1.solveDay()
 }
 
-abstract class Day(val id: Int, val title: String){
 
-    fun solveDay() {
-        println("--- Day ${this.id}: ${this.title} ---")
-        var part1Solution: String
-        val part1Time = measureTimeMillis {
-            part1Solution = this.solvePart1()
-        }
-        println("Puzzle answer : $part1Solution - time : $part1Time ms")
-
-        println("--- Part Two ---")
-        var part2Solution: String
-        val part2Time = measureTimeMillis {
-            part2Solution = this.solvePart2()
-        }
-        println("Puzzle answer : $part2Solution - time $part2Time ms")
-
-        println()
-    }
-
-    abstract fun solvePart1(): String
-
-    abstract fun solvePart2(): String
-}

@@ -4,11 +4,10 @@ import com.github.juwit.adventofcode2020.Day
 
 class Day1: Day(1, "Report Repair"){
 
-    val input = "/input-day-01.txt".asIntList()
-
-    override fun solvePart1(): String {
-        for (a in input) {
-            for(b in input) {
+    override fun solvePart1(input: List<String>): String {
+        val inputAsInt = input.toIntList()
+        for (a in inputAsInt) {
+            for(b in inputAsInt) {
                 if(a+b == 2020){
                     return (a*b).toString()
                 }
@@ -18,10 +17,11 @@ class Day1: Day(1, "Report Repair"){
         throw IllegalStateException("Cloud not determine puzzle answer")
     }
 
-    override fun solvePart2(): String {
-        for (a in input) {
-            for(b in input) {
-                for(c in input) {
+    override fun solvePart2(input: List<String>): String {
+        val inputAsInt = input.toIntList()
+        for (a in inputAsInt) {
+            for(b in inputAsInt) {
+                for(c in inputAsInt) {
                     if(a+b+c == 2020){
                         return (a*b*c).toString()
                     }
@@ -34,8 +34,4 @@ class Day1: Day(1, "Report Repair"){
 
 }
 
-fun String.asString(): String = {}.javaClass.getResource(this).readText()
-
-fun String.asStringList(): List<String> = this.asString().split("\n")
-
-fun String.asIntList(): List<Int> = this.asStringList().map { it.toInt() }
+fun List<String>.toIntList(): List<Int> = this.map(String::toInt)
