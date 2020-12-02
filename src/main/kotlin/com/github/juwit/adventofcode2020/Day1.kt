@@ -1,4 +1,4 @@
-package com.github.juwit.adventofcode2020.day01
+package com.github.juwit.adventofcode2020
 
 import com.github.juwit.adventofcode2020.Day
 
