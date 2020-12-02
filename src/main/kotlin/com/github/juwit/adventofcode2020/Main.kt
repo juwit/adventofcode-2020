@@ -7,8 +7,8 @@ fun main() {
     println("[AdventOfCode - 2020]")
     println()
 
-    val day1 = Day1()
-    day1.solveDay()
+    Day1().solveDay()
+    Day2().solveDay()
 }
 
 

@@ -1,7 +1,7 @@
 package com.github.juwit.adventofcode2020.day01
 
 import com.github.juwit.adventofcode2020.asStringList
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 internal class Day1Test{
