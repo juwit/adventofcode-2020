@@ -1,15 +1,13 @@
 package com.github.juwit.adventofcode2020
 
-import com.github.juwit.adventofcode2020.Day
-
-class Day1: Day(1, "Report Repair"){
+class Day1 : Day(1, "Report Repair") {
 
     override fun solvePart1(input: List<String>): String {
         val inputAsInt = input.toIntList()
         for (a in inputAsInt) {
-            for(b in inputAsInt) {
-                if(a+b == 2020){
-                    return (a*b).toString()
+            for (b in inputAsInt) {
+                if (a + b == 2020) {
+                    return (a * b).toString()
                 }
             }
         }
@@ -20,10 +18,10 @@ class Day1: Day(1, "Report Repair"){
     override fun solvePart2(input: List<String>): String {
         val inputAsInt = input.toIntList()
         for (a in inputAsInt) {
-            for(b in inputAsInt) {
-                for(c in inputAsInt) {
-                    if(a+b+c == 2020){
-                        return (a*b*c).toString()
+            for (b in inputAsInt) {
+                for (c in inputAsInt) {
+                    if (a + b + c == 2020) {
+                        return (a * b * c).toString()
                     }
                 }
             }
