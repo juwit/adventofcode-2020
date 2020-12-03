@@ -40,10 +40,10 @@ internal class Day3Test {
     }
 
     @Test
-    fun part2_should_find_valid_passwords() {
+    fun part2_should_encountered_tree_count() {
         val day = Day3()
 
-        assertEquals("1", day.solvePart2(testInput))
+        assertEquals("336", day.solvePart2(testInput))
     }
 
 }
