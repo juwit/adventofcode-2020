@@ -16,6 +16,16 @@ class GroupAnswers() {
             .distinct()
             .count()
     }
+
+    fun countEveryOneYesAnswers(): Int {
+        var count = 0
+        for(c in 'a'..'z') {
+            if( answersList.all { it.contains(c) } ){
+                count++
+            }
+        }
+        return count
+    }
 }
 
 fun parseGroupAnswers(allAnswers: List<String>): List<GroupAnswers> {
@@ -44,6 +54,9 @@ class Day6: Day(6, "Custom Customs") {
     }
 
     override fun solvePart2(input: List<String>): String {
-        TODO("Not yet implemented")
+        return parseGroupAnswers(input)
+            .map { it.countEveryOneYesAnswers() }
+            .sum()
+            .toString()
     }
 }

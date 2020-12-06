@@ -36,4 +36,10 @@ internal class Day6Test {
         assertThat(Day6().solvePart1(testInput)).isEqualTo("11")
     }
 
+    @Test
+    fun test_count_every_yes_answers() {
+        assertThat(parseGroupAnswers(testInput).map { it.countEveryOneYesAnswers() })
+            .isEqualTo(listOf(3, 0, 1, 1, 1))
+    }
+
 }
