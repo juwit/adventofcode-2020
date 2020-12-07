@@ -35,4 +35,9 @@ internal class Day7Test {
         assertThat(Day7().solvePart1(testInput)).isEqualTo("4")
     }
 
+    @Test
+    fun test_shiny_gold_bag_must_contain_32_bags(){
+        assertThat(Day7().solvePart2(testInput)).isEqualTo("32")
+    }
+
 }

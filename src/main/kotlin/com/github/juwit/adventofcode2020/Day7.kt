@@ -14,6 +14,10 @@ data class Bag(val color: String){
                 // traversal link
                 || canContain.keys.any { it.canContain(bag) }
     }
+
+    fun countContainedBags(): Int {
+        return canContain.values.sum() + canContain.entries.sumBy { it.key.countContainedBags() * it.value }
+    }
 }
 
 fun parseBagsGraph(input: List<String>): Map<String, Bag> {
@@ -48,6 +52,11 @@ class Day7: Day(7, "Handy Haversacks") {
     }
 
     override fun solvePart2(input: List<String>): String {
-        TODO("Not yet implemented")
+        // parse graph
+        val bagsGraph = parseBagsGraph(input)
+        // get "shiny gold" bag
+        val shinyGold = bagsGraph["shiny gold"]!!
+
+        return shinyGold.countContainedBags().toString()
     }
 }
