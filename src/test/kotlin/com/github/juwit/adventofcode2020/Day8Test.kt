@@ -39,4 +39,9 @@ internal class Day8Test {
         assertThat(Day8().solvePart1(testInput)).isEqualTo("5")
     }
 
+    @Test
+    fun test_try_to_correct_loop(){
+        assertThat(Day8().solvePart2(testInput)).isEqualTo("8")
+    }
+
 }
