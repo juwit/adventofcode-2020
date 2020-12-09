@@ -49,4 +49,9 @@ internal class Day9Test {
         assertThat(Day9(5).solvePart1(testInput)).isEqualTo("127")
     }
 
+    @Test
+    fun test_find_contiguous_set() {
+        assertThat(Day9(5).solvePart2(testInput)).isEqualTo("62")
+    }
+
 }
