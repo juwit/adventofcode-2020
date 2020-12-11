@@ -59,4 +59,10 @@ internal class Day10Test {
         assertThat(Day10().solvePart1(secondTestInput)).isEqualTo("220")
     }
 
+    @Test
+    fun test_find_adapters_arrangements() {
+        assertThat(Day10().solvePart2(testInput)).isEqualTo("8")
+        assertThat(Day10().solvePart2(secondTestInput)).isEqualTo("19208")
+    }
+
 }
