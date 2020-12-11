@@ -79,7 +79,7 @@ internal class Day11Test {
     fun test_round_one(){
         val waitingArea = parseInput(testInput)
 
-        val afterRoundOne = oneRound(waitingArea).toWaitingAreaString()
+        val afterRoundOne = oneRound(waitingArea, ::adjacentSeats, 4).toWaitingAreaString()
 
         assertThat(afterRoundOne).isEqualTo(afterOneRoundExpected)
     }
@@ -88,7 +88,7 @@ internal class Day11Test {
     fun test_round_two(){
         val waitingArea = parseInput(afterOneRoundExpected)
 
-        val afterRoundOne = oneRound(waitingArea).toWaitingAreaString()
+        val afterRoundOne = oneRound(waitingArea, ::adjacentSeats, 4).toWaitingAreaString()
 
         assertThat(afterRoundOne).isEqualTo(afterOneTwoExpected)
     }
@@ -96,6 +96,45 @@ internal class Day11Test {
     @Test
     fun test_solve_part_one(){
         assertThat(Day11().solvePart1(testInput)).isEqualTo("37")
+    }
+
+    @Test
+    fun `For example, the empty seat below would see eight occupied seats`() {
+        val input = """
+            .......#.
+            ...#.....
+            .#.......
+            .........
+            ..#L....#
+            ....#....
+            .........
+            #........
+            ...#.....
+        """.trimIndent().asStringList()
+
+        val waitingArea = parseInput(input)
+
+        assertThat(visibleSeats(waitingArea,4,3))
+            .hasSize(8)
+            .allMatch { it == true}
+    }
+
+    @Test
+    fun `The leftmost empty seat below would only see one empty seat, but cannot see any of the occupied ones`(){
+        val input = """
+            .............
+            .L.L.#.#.#.#.
+            .............
+        """.trimIndent().asStringList()
+
+        val waitingArea = parseInput(input)
+
+        assertThat(visibleSeats(waitingArea,1,1)).contains(false)
+    }
+
+    @Test
+    fun test_solve_part_two(){
+        assertThat(Day11().solvePart2(testInput)).isEqualTo("26")
     }
 
 }
