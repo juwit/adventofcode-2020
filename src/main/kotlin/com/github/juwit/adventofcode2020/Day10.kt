@@ -45,16 +45,16 @@ class Day10: Day(10, "Adapter Array") {
         return adapterChain
     }
 
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Int {
         val adapterChain = buildAdapterChain(input)
 
         val oneDiff = adapterChain.zipWithNext().count { it.hasADifferenceOf(1) }
         val threeDiff = adapterChain.zipWithNext().count { it.hasADifferenceOf(3) }
 
-        return (oneDiff * threeDiff).toString()
+        return oneDiff * threeDiff
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Long {
         val adapterChain = buildAdapterChain(input)
 
         // build a graph from the ordered chain !
@@ -72,6 +72,6 @@ class Day10: Day(10, "Adapter Array") {
         }
 
         // count all the paths
-        return adapterGraph[0].countPath().toString()
+        return adapterGraph[0].countPath()
     }
 }

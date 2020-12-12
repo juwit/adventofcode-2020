@@ -105,12 +105,12 @@ class Program(val instructions: List<Instruction>) {
 
 class Day8 : Day(8, "Handheld Halting") {
 
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Long {
         val instructions = parseProgramInstructions(input)
-        return Program(instructions).runUntilLoop().toString()
+        return Program(instructions).runUntilLoop().toLong()
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Long {
         val instructions = parseProgramInstructions(input).toMutableList()
 
         // ok so now, we have to change the program !
@@ -132,12 +132,12 @@ class Day8 : Day(8, "Handheld Halting") {
             newInstructions[it] = newInstructions[it].mutate()
             try {
                 // try to execute to the end with the mutation
-                return Program(newInstructions).runToTheEnd().toString()
+                return Program(newInstructions).runToTheEnd().toLong()
             }
             catch (e:java.lang.IllegalArgumentException){
                 // not this one ! next !
             }
         }
-        return "not found !"
+        throw Exception("could not find puzzle answer")
     }
 }

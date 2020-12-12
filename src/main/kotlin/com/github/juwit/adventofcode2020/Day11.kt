@@ -122,7 +122,7 @@ fun List<List<String>>.toWaitingAreaBoolean() = this.map { it.toWaitingAreaBoole
 
 class Day11 : Day(11, "Seating System") {
 
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Int {
         // parse input
         var waitingArea: List<List<Boolean?>> = parseInput(input)
 
@@ -133,10 +133,10 @@ class Day11 : Day(11, "Seating System") {
             previousWaitingAreaState = waitingArea
             waitingArea = oneRound(waitingArea, ::adjacentSeats, 4)
         }
-        return waitingArea.sumOf { it.count { b -> b == true } }.toString()
+        return waitingArea.sumOf { it.count { b -> b == true } }
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Int {
         // parse input
         var waitingArea: List<List<Boolean?>> = parseInput(input)
 
@@ -147,7 +147,7 @@ class Day11 : Day(11, "Seating System") {
             previousWaitingAreaState = waitingArea
             waitingArea = oneRound(waitingArea, ::visibleSeats, 5)
         }
-        return waitingArea.sumOf { it.count { b -> b == true } }.toString()
+        return waitingArea.sumOf { it.count { b -> b == true } }
     }
 
 }

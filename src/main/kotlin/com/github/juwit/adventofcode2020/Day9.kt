@@ -17,15 +17,15 @@ fun isPositionRight(position: Int, input: List<Long>, preamble:Int = 25): Boolea
 
 class Day9(val preamble: Int = 25): Day(9, "Encoding Error") {
 
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Long {
         val inputInts = input.map(String::toLong)
         val wrongIndex = (preamble until input.size-1).find {
             ! isPositionRight(it, inputInts, preamble)
         }
-        return input[wrongIndex!!]
+        return input[wrongIndex!!].toLong()
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Long {
         val wrongValue = solvePart1(input).toLong()
         val inputInts = input.map(String::toLong)
 
@@ -33,7 +33,7 @@ class Day9(val preamble: Int = 25): Day(9, "Encoding Error") {
             val sequenceEndIdx = inputInts.sumToMaxIndex(index, wrongValue)
             if(sequenceEndIdx != -1){
                 val contiguousSequence = inputInts.subList(index, sequenceEndIdx)
-                return (contiguousSequence.minOrNull()!! + contiguousSequence.maxOrNull()!!).toString()
+                return (contiguousSequence.minOrNull()!! + contiguousSequence.maxOrNull()!!)
             }
         }
 

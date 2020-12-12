@@ -77,7 +77,7 @@ internal class Day4Test {
     fun part1_should_count_valid_passports() {
         val day = Day4()
 
-        assertEquals("2", day.solvePart1(testInput))
+        assertEquals(2, day.solvePart1(testInput))
     }
 
     @Test

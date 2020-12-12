@@ -33,7 +33,7 @@ internal class Day6Test {
 
     @Test
     fun part1_should_yes_count_sum() {
-        assertThat(Day6().solvePart1(testInput)).isEqualTo("11")
+        assertThat(Day6().solvePart1(testInput)).isEqualTo(11)
     }
 
     @Test

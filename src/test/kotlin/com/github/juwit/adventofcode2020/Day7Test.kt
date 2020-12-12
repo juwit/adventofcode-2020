@@ -32,12 +32,12 @@ internal class Day7Test {
 
     @Test
     fun test_find_bags_that_can_hold_my_shiny_gold_bag(){
-        assertThat(Day7().solvePart1(testInput)).isEqualTo("4")
+        assertThat(Day7().solvePart1(testInput)).isEqualTo(4)
     }
 
     @Test
     fun test_shiny_gold_bag_must_contain_32_bags(){
-        assertThat(Day7().solvePart2(testInput)).isEqualTo("32")
+        assertThat(Day7().solvePart2(testInput)).isEqualTo(32)
     }
 
 }

@@ -46,17 +46,15 @@ fun parseGroupAnswers(allAnswers: List<String>): List<GroupAnswers> {
 
 class Day6: Day(6, "Custom Customs") {
 
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Int {
         return parseGroupAnswers(input)
             .map { it.countYesAnswers() }
             .sum()
-            .toString()
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Int {
         return parseGroupAnswers(input)
             .map { it.countEveryOneYesAnswers() }
             .sum()
-            .toString()
     }
 }

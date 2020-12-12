@@ -18,20 +18,18 @@ fun String.toBoardingPass(): BoardingPass {
 }
 
 class Day5 : Day(5, "Binary Boarding") {
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Int {
         return input.map { it.toBoardingPass() }
             .maxOf { it.seatId() }
-            .toString()
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Int {
         return input.map { it.toBoardingPass().seatId() }
                 // sort the list of seats
             .sorted()
                 // zip the ids two by two
             .zipWithNext()
                 // find the ones that don't follow each other (meaning the missing one)
-            .find { it.first + 2 == it.second }!!.first.inc().toString()
-
+            .find { it.first + 2 == it.second }!!.first.inc()
     }
 }

@@ -32,7 +32,7 @@ data class Waypoint(var north: Int = 1, var east: Int = 10) {
 }
 
 class Day12: Day(12, "Rain Risk") {
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Int {
         val ship = Ship()
 
         input.forEach {
@@ -59,10 +59,10 @@ class Day12: Day(12, "Rain Risk") {
         }
 
         // return manhattan distance from 0/0
-        return (abs(ship.north) + abs(ship.east)).toString()
+        return (abs(ship.north) + abs(ship.east))
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Int {
         val ship = Ship()
         val waypoint = Waypoint()
 
@@ -81,6 +81,6 @@ class Day12: Day(12, "Rain Risk") {
         }
 
         // return manhattan distance from 0/0
-        return (abs(ship.north) + abs(ship.east)).toString()
+        return (abs(ship.north) + abs(ship.east))
     }
 }

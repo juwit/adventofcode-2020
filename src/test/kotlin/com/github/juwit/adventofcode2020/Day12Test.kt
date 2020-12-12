@@ -15,7 +15,7 @@ class Day12Test {
 
     @Test
     fun testSolvePart1(){
-        assertThat(Day12().solvePart1(testInput)).isEqualTo("25")
+        assertThat(Day12().solvePart1(testInput)).isEqualTo(25)
     }
 
     @Test
@@ -33,6 +33,6 @@ class Day12Test {
 
     @Test
     fun testSolvePart2(){
-        assertThat(Day12().solvePart2(testInput)).isEqualTo("286")
+        assertThat(Day12().solvePart2(testInput)).isEqualTo(286)
     }
 }

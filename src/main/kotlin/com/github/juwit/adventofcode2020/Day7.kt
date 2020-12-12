@@ -42,21 +42,21 @@ fun parseBagsGraph(input: List<String>): Map<String, Bag> {
 }
 
 class Day7: Day(7, "Handy Haversacks") {
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Long {
         // parse graph
         val bagsGraph = parseBagsGraph(input)
         // get "shiny gold" bag
         val shinyGold = bagsGraph["shiny gold"]!!
 
-        return bagsGraph.values.count { it.canContain(shinyGold) }.toString()
+        return bagsGraph.values.count { it.canContain(shinyGold) }.toLong()
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Long {
         // parse graph
         val bagsGraph = parseBagsGraph(input)
         // get "shiny gold" bag
         val shinyGold = bagsGraph["shiny gold"]!!
 
-        return shinyGold.countContainedBags().toString()
+        return shinyGold.countContainedBags().toLong()
     }
 }

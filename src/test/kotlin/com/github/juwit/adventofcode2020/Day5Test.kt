@@ -22,7 +22,7 @@ internal class Day5Test {
 
     @Test
     fun part1_should_find_highest_seat_id() {
-        assertThat(Day5().solvePart1(testInput)).isEqualTo("820")
+        assertThat(Day5().solvePart1(testInput)).isEqualTo(820)
     }
 
 }

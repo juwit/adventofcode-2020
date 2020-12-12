@@ -2,12 +2,12 @@ package com.github.juwit.adventofcode2020
 
 class Day1 : Day(1, "Report Repair") {
 
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Int {
         val inputAsInt = input.toIntList()
         for (a in inputAsInt) {
             for (b in inputAsInt) {
                 if (a + b == 2020) {
-                    return (a * b).toString()
+                    return a * b
                 }
             }
         }
@@ -15,13 +15,13 @@ class Day1 : Day(1, "Report Repair") {
         throw IllegalStateException("Cloud not determine puzzle answer")
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Int {
         val inputAsInt = input.toIntList()
         for (a in inputAsInt) {
             for (b in inputAsInt) {
                 for (c in inputAsInt) {
                     if (a + b + c == 2020) {
-                        return (a * b * c).toString()
+                        return a * b * c
                     }
                 }
             }

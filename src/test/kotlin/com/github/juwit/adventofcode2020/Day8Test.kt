@@ -36,12 +36,12 @@ internal class Day8Test {
 
     @Test
     fun test_find_accumulator_value_before_loop(){
-        assertThat(Day8().solvePart1(testInput)).isEqualTo("5")
+        assertThat(Day8().solvePart1(testInput)).isEqualTo(5)
     }
 
     @Test
     fun test_try_to_correct_loop(){
-        assertThat(Day8().solvePart2(testInput)).isEqualTo("8")
+        assertThat(Day8().solvePart2(testInput)).isEqualTo(8)
     }
 
 }

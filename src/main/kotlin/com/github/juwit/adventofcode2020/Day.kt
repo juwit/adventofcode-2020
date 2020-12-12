@@ -12,14 +12,14 @@ abstract class Day(private val id: Int, private val title: String) {
 
     fun solveDay() {
         println("--- Day ${this.id}: ${this.title} ---")
-        var part1Solution: String
+        var part1Solution: Number
         val part1Time = measureTimeMillis {
             part1Solution = this.solvePart1(input)
         }
         println("Puzzle answer : $part1Solution - time : $part1Time ms")
 
         println("--- Part Two ---")
-        var part2Solution: String
+        var part2Solution: Number
         val part2Time = measureTimeMillis {
             part2Solution = this.solvePart2(input)
         }
@@ -28,9 +28,9 @@ abstract class Day(private val id: Int, private val title: String) {
         println()
     }
 
-    abstract fun solvePart1(input: List<String>): String
+    abstract fun solvePart1(input: List<String>): Number
 
-    abstract fun solvePart2(input: List<String>): String
+    abstract fun solvePart2(input: List<String>): Number
 
 }
 

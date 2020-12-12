@@ -15,14 +15,14 @@ internal class Day2Test {
     fun part1_should_find_valid_passwords() {
         val day = Day2()
 
-        assertEquals("2", day.solvePart1(testInput))
+        assertEquals(2, day.solvePart1(testInput))
     }
 
     @Test
     fun part2_should_find_valid_passwords() {
         val day = Day2()
 
-        assertEquals("1", day.solvePart2(testInput))
+        assertEquals(1, day.solvePart2(testInput))
     }
 
 }

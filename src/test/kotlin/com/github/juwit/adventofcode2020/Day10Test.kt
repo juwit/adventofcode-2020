@@ -55,14 +55,14 @@ internal class Day10Test {
 
     @Test
     fun test_find_joltage_difference_multiplied() {
-        assertThat(Day10().solvePart1(testInput)).isEqualTo("35")
-        assertThat(Day10().solvePart1(secondTestInput)).isEqualTo("220")
+        assertThat(Day10().solvePart1(testInput)).isEqualTo(35)
+        assertThat(Day10().solvePart1(secondTestInput)).isEqualTo(220)
     }
 
     @Test
     fun test_find_adapters_arrangements() {
-        assertThat(Day10().solvePart2(testInput)).isEqualTo("8")
-        assertThat(Day10().solvePart2(secondTestInput)).isEqualTo("19208")
+        assertThat(Day10().solvePart2(testInput)).isEqualTo(8)
+        assertThat(Day10().solvePart2(secondTestInput)).isEqualTo(19208)
     }
 
 }

@@ -30,14 +30,14 @@ fun String.toPositionPasswordPolicyAndPassword(): Pair<PasswordPolicy, String> {
 
 class Day2 : Day(2, "Password Philosophy") {
 
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Int {
         val inputAsPasswordPolicy = input.map { it.toCountPasswordPolicyAndPassword() }
-        return inputAsPasswordPolicy.count { (policy, password) -> policy.isValid(password) }.toString()
+        return inputAsPasswordPolicy.count { (policy, password) -> policy.isValid(password) }
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Int {
         val inputAsPasswordPolicy = input.map { it.toPositionPasswordPolicyAndPassword() }
-        return inputAsPasswordPolicy.count { (policy, password) -> policy.isValid(password) }.toString()
+        return inputAsPasswordPolicy.count { (policy, password) -> policy.isValid(password) }
     }
 
 

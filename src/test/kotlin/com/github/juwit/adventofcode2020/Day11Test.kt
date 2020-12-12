@@ -95,7 +95,7 @@ internal class Day11Test {
 
     @Test
     fun test_solve_part_one(){
-        assertThat(Day11().solvePart1(testInput)).isEqualTo("37")
+        assertThat(Day11().solvePart1(testInput)).isEqualTo(37)
     }
 
     @Test
@@ -134,7 +134,7 @@ internal class Day11Test {
 
     @Test
     fun test_solve_part_two(){
-        assertThat(Day11().solvePart2(testInput)).isEqualTo("26")
+        assertThat(Day11().solvePart2(testInput)).isEqualTo(26)
     }
 
 }

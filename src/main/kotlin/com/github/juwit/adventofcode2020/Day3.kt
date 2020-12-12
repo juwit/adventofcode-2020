@@ -23,13 +23,13 @@ class Day3: Day(3, "Toboggan Trajectory") {
         return count
     }
 
-    override fun solvePart1(input: List<String>): String {
+    override fun solvePart1(input: List<String>): Int {
         val slope = Slope(1,3)
 
-        return countTreesForSlope(input, slope).toString()
+        return countTreesForSlope(input, slope)
     }
 
-    override fun solvePart2(input: List<String>): String {
+    override fun solvePart2(input: List<String>): Int {
         val slope1 = Slope(1,1)
         val slope2 = Slope(1,3)
         val slope3 = Slope(1,5)
@@ -38,8 +38,7 @@ class Day3: Day(3, "Toboggan Trajectory") {
 
         return listOf(slope1, slope2, slope3, slope4, slope5)
                 .map { countTreesForSlope(input, it) }
-                .reduce { a:Int, b:Int -> a*b }
-                .toString()
+                .reduce { a, b -> a*b }
     }
 
 }

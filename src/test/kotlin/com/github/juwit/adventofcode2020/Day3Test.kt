@@ -36,14 +36,14 @@ internal class Day3Test {
     fun part1_should_encountered_tree_count() {
         val day = Day3()
 
-        assertEquals("7", day.solvePart1(testInput))
+        assertEquals(7, day.solvePart1(testInput))
     }
 
     @Test
     fun part2_should_encountered_tree_count() {
         val day = Day3()
 
-        assertEquals("336", day.solvePart2(testInput))
+        assertEquals(336, day.solvePart2(testInput))
     }
 
 }

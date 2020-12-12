@@ -87,11 +87,11 @@ fun parsePassports(input: List<String>): List<Passport> {
 
 class Day4 : Day(4, "Passport Processing") {
 
-    override fun solvePart1(input: List<String>): String {
-        return parsePassports(input).count { it.hasAllRequiredFields() }.toString()
+    override fun solvePart1(input: List<String>): Int {
+        return parsePassports(input).count { it.hasAllRequiredFields() }
     }
 
-    override fun solvePart2(input: List<String>): String {
-        return parsePassports(input).count { it.isValid() }.toString()
+    override fun solvePart2(input: List<String>): Int {
+        return parsePassports(input).count { it.isValid() }
     }
 }

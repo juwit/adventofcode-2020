@@ -46,12 +46,12 @@ internal class Day9Test {
 
     @Test
     fun test_find_first_wrong_value() {
-        assertThat(Day9(5).solvePart1(testInput)).isEqualTo("127")
+        assertThat(Day9(5).solvePart1(testInput)).isEqualTo(127)
     }
 
     @Test
     fun test_find_contiguous_set() {
-        assertThat(Day9(5).solvePart2(testInput)).isEqualTo("62")
+        assertThat(Day9(5).solvePart2(testInput)).isEqualTo(62)
     }
 
 }
