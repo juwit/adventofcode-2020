@@ -5,6 +5,7 @@
     <artifactId>adventofcode</artifactId>
     <version>2020</version>
 
+
     <name>adventofcode-2020</name>
 
     <properties>
@@ -15,6 +16,7 @@
         <graalvm.version>20.3.0</graalvm.version>
 
         <main.class>com.github.juwit.adventofcode2020.AdventOfCodeKt</main.class>
+        <picocli.version>4.5.2</picocli.version>
     </properties>
 
     <dependencies>
@@ -22,6 +24,12 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.picocli</groupId>
+            <artifactId>picocli</artifactId>
+            <version>${picocli.version}</version>
         </dependency>
 
         <dependency>
