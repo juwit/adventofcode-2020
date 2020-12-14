@@ -18,7 +18,7 @@ class AdventOfCode: Callable<Int> {
         println()
 
         // autoloading all days
-        (1..12).forEach {
+        (1..13).forEach {
             Class.forName("com.github.juwit.adventofcode2020.Day$it").getConstructor().newInstance()
         }
 
