@@ -29,6 +29,29 @@ class Day15 : Day(15, "Rambunctious Recitation") {
     }
 
     override fun solvePart2(input: List<String>): Number {
-        TODO("Not yet implemented")
+        val numbers = input[0].split(",").map { it.toLong() }.toMutableList()
+
+        // first implementation was using naive technique, iterating in the list
+//        for (i in numbers.size until 30_000_000) {
+//            numbers.add(nextNumber(numbers))
+//        }
+
+        // try with an intelligent map, which contains only the last index for each number
+        var currentNumberToSpeak = nextNumber(numbers)
+
+        val lastSpokenIndexMap = numbers.mapIndexed { index, number -> number to index + 1 }.toMap().toMutableMap()
+
+        for (turn in numbers.size + 1 until 30_000_000) {
+            val lastIndex = lastSpokenIndexMap.getOrDefault(currentNumberToSpeak, 0)
+            lastSpokenIndexMap[currentNumberToSpeak] = turn
+            currentNumberToSpeak = if (lastIndex == 0) {
+                0L
+            } else {
+                (turn - lastIndex).toLong()
+            }
+        }
+
+
+        return currentNumberToSpeak
     }
 }

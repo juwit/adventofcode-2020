@@ -51,4 +51,15 @@ class Day15Test {
         assertThat(Day15().solvePart1(listOf("3,1,2"))).isEqualTo(1836L)
     }
 
+    @Test
+    fun testSolvePart2() {
+        assertThat(Day15().solvePart2(listOf("0,3,6"))).isEqualTo(175594L)
+        assertThat(Day15().solvePart2(listOf("1,3,2"))).isEqualTo(2578L)
+        assertThat(Day15().solvePart2(listOf("2,1,3"))).isEqualTo(3544142L)
+        assertThat(Day15().solvePart2(listOf("1,2,3"))).isEqualTo(261214L)
+        assertThat(Day15().solvePart2(listOf("2,3,1"))).isEqualTo(6895259L)
+        assertThat(Day15().solvePart2(listOf("3,2,1"))).isEqualTo(18L)
+        assertThat(Day15().solvePart2(listOf("3,1,2"))).isEqualTo(362L)
+    }
+
 }
