@@ -22,14 +22,11 @@ class Day16Test {
 
     @Test
     fun `parse fields rules`() {
-        assertThat(Day16().parseFieldsRules(testInput).map { it.validRange }).isEqualTo(
+        assertThat(Day16().parseFieldsRules(testInput).map { it.validRanges }).isEqualTo(
             listOf(
-                1..3,
-                5..7,
-                6..11,
-                33..44,
-                13..40,
-                45..50
+                listOf(1..3, 5..7),
+                listOf(6..11, 33..44),
+                listOf(13..40, 45..50)
             )
         )
     }
@@ -38,16 +35,16 @@ class Day16Test {
     fun `parse nearby tickets`() {
         assertThat(Day16().parseNearbyTickets(testInput)).isEqualTo(
             listOf(
-                listOf(7,3,47),
-                listOf(40,4,50),
-                listOf(55,2,20),
-                listOf(38,6,12),
+                listOf(7, 3, 47),
+                listOf(40, 4, 50),
+                listOf(55, 2, 20),
+                listOf(38, 6, 12),
             )
         )
     }
 
     @Test
-    fun testPart1(){
+    fun testPart1() {
         assertThat(Day16().solvePart1(testInput)).isEqualTo(71)
     }
 
