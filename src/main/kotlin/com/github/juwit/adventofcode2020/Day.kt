@@ -2,13 +2,7 @@ package com.github.juwit.adventofcode2020
 
 import kotlin.system.measureTimeMillis
 
-val days = mutableListOf<Day>()
-
 abstract class Day(val id: Int, private val title: String) {
-
-    init {
-        days.add(this)
-    }
 
     fun inputFileName() = "/input-day-${id.toString().padStart(2, '0')}.txt"
 
