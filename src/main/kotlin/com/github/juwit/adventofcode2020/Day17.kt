@@ -15,7 +15,7 @@ class Day17 : Day(17, "Conway Cubes") {
             val expansion = currentState.flatMap { it.findNewNeighbors(currentState) }.toMutableSet()
             currentState.addAll(expansion)
 
-            currentState.forEach {
+            currentState.parallelStream().forEach {
                 // calculate new states
                 val dimensionPart = it.nextState(currentState)
                 if(dimensionPart.active){ // only storing active state

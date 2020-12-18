@@ -39,7 +39,8 @@ class AdventOfCode : Callable<Int> {
                 Day14(),
                 Day15(),
                 Day16(),
-                Day17()
+                Day17(),
+                Day18(),
             )
 
         if (runAllDays) {
@@ -47,7 +48,8 @@ class AdventOfCode : Callable<Int> {
                 it.solveDay()
             }
         } else if (dayNumber != 0) {
-            val day = days.find { it.id == dayNumber } ?: throw IllegalArgumentException("could not find day #$dayNumber")
+            val day =
+                days.find { it.id == dayNumber } ?: throw IllegalArgumentException("could not find day #$dayNumber")
             day.solveDay()
             return 0
         }
