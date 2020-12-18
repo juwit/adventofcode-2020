@@ -48,7 +48,7 @@ class Day17Test {
 
     @Test
     fun testParseInitialDimensionState() {
-        assertThat(Day17().parseInitialDimensionState(testInput).currentState)
+        assertThat(Day17().parseInitial3DimensionState(testInput).currentState)
             .contains(
                 Day17.Cube(0, 0, 0),
                 Day17.Cube(1, 0, 0),
@@ -64,7 +64,7 @@ class Day17Test {
 
     @Test
     fun testAfterOneCycle(){
-        val dimension = Day17().parseInitialDimensionState(testInput)
+        val dimension = Day17().parseInitial3DimensionState(testInput)
         dimension.nextState()
 
         val after1Cycle = dimension.currentState
@@ -91,5 +91,10 @@ class Day17Test {
     @Test
     fun testSolvePart1(){
         assertThat(Day17().solvePart1(testInput)).isEqualTo(112)
+    }
+
+    @Test
+    fun testSolvePart2(){
+        assertThat(Day17().solvePart2(testInput)).isEqualTo(848)
     }
 }
